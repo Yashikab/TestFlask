@@ -1,11 +1,11 @@
 from flask import Flask, request, jsonify, abort
-
+import os
 app = Flask(__name__)
 
 
 @app.route("/")
 def show_page():
-    name = 'hello world from yk840'
+    name = os.environ['TEST']
     return name
 
 
